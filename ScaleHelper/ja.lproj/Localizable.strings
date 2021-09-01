@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  ScaleHelper
+
+  Created by Takuto Nakamura on 2021/09/02.
+  
+*/
+
+"allowedInformative" = "ScaleHelper拡張機能は許可済みです。";
+
+"requiresPermission" = "ScaleHelper拡張機能には許可が必要です。";
+"grantPermission" = "システム環境設定にて許可を与えてください。";
+"openPreferences" = "システム環境設定を開く";
+"cancel" = "キャンセル";

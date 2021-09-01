@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  ScaleHelper
+
+  Created by Takuto Nakamura on 2021/09/02.
+  
+*/
+
+"create1x" = "Generate a 1x image";
+"create2x" = "Generate 1x and 2x images";

@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  ScaleHelper
+
+  Created by Takuto Nakamura on 2021/09/02.
+  
+*/
+
+"allowedInformative" = "ScaleHelper extension has already been allowed.";
+
+"requiresPermission" = "ScaleHelper extension requires permission.";
+"grantPermission" = "Please grant the permission in the system preferences.";
+"openPreferences" = "Open System Preferences";
+"cancel" = "Cancel";

@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  ScaleHelper
+
+  Created by Takuto Nakamura on 2021/09/02.
+  
+*/
+
+"create1x" = "1倍の画像を生成する";
+"create2x" = "1倍と2倍の画像を生成する";
