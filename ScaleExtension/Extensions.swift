@@ -42,15 +42,44 @@ extension CGFloat {
 }
 
 extension NSImage {
-    func resized(with ratio: CGFloat) -> NSImage {
+    var ppi: CGFloat {
         let rep = self.representations[0]
-        let pixelSize = NSSize(width: rep.pixelsWide, height: rep.pixelsHigh)
-        let newPixelSize = NSSize(width: (ratio * pixelSize.width).roundedInt,
-                                  height: (ratio * pixelSize.height).roundedInt)
-        let image = NSImage(size: newPixelSize)
-        image.lockFocus()
-        self.draw(in: NSRect(origin: .zero, size: newPixelSize))
-        image.unlockFocus()
+        return (72.0 * CGFloat(rep.pixelsWide) / self.size.width)
+    }
+    
+    var pixelSize: CGSize {
+        let rep = self.representations[0]
+        return CGSize(width: rep.pixelsWide, height: rep.pixelsHigh)
+    }
+    
+    func resized(with ratio: CGFloat) -> NSImage {
+        let pixelSize = self.pixelSize
+        let newPixelsWide: Int = (ratio * pixelSize.width).roundedInt
+        let newPixelsHigh: Int = (ratio * pixelSize.height).roundedInt
+        
+        let sourceRep = NSBitmapImageRep(data: self.tiffRepresentation!)!
+        let resizedRep = NSBitmapImageRep(bitmapDataPlanes: nil,
+                                          pixelsWide: newPixelsWide,
+                                          pixelsHigh: newPixelsHigh,
+                                          bitsPerSample: sourceRep.bitsPerSample,
+                                          samplesPerPixel: sourceRep.samplesPerPixel,
+                                          hasAlpha: sourceRep.hasAlpha,
+                                          isPlanar: sourceRep.isPlanar,
+                                          colorSpaceName: sourceRep.colorSpaceName,
+                                          bytesPerRow: sourceRep.bytesPerRow,
+                                          bitsPerPixel: sourceRep.bitsPerPixel)!
+        let ppi = self.ppi
+        let newSize = NSSize(width: CGFloat(newPixelsWide) * 72.0 / ppi,
+                             height: CGFloat(newPixelsHigh) * 72.0 / ppi)
+        resizedRep.size = newSize
+        
+        NSGraphicsContext.saveGraphicsState()
+        NSGraphicsContext.current = NSGraphicsContext(bitmapImageRep: resizedRep)
+        self.draw(in: NSRect(origin: .zero, size: newSize))
+        NSGraphicsContext.restoreGraphicsState()
+        
+        let image = NSImage(size: newSize)
+        image.addRepresentation(resizedRep)
         return image
     }
 }
