@@ -6,9 +6,5 @@
   
 */
 
-"allowedInformative" = "ScaleHelper拡張機能は許可済みです。";
-
-"requiresPermission" = "ScaleHelper拡張機能には許可が必要です。";
-"grantPermission" = "システム環境設定にて許可を与えてください。";
-"openPreferences" = "システム環境設定を開く";
-"cancel" = "キャンセル";
+"NotAllowedInformative" = "ScaleHelperの機能拡張は許可されていません。";
+"AllowedInformative" = "ScaleHelperの機能拡張は許可済みです。";

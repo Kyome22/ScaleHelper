@@ -6,9 +6,5 @@
   
 */
 
-"allowedInformative" = "ScaleHelper extension has already been allowed.";
-
-"requiresPermission" = "ScaleHelper extension requires permission.";
-"grantPermission" = "Please grant the permission in the system preferences.";
-"openPreferences" = "Open System Preferences";
-"cancel" = "Cancel";
+"NotAllowedInformative" = "ScaleHelper extension is not been allowed.";
+"AllowedInformative" = "ScaleHelper extension has already been allowed.";

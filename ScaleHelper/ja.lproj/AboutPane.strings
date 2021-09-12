@@ -1,0 +1,12 @@
+
+/* Class = "NSViewController"; title = "About"; ObjectID = "bU7-R8-ocO"; */
+"bU7-R8-ocO.title" = "アプリ情報";
+
+/* Class = "NSTextFieldCell"; title = "ScaleHelper"; ObjectID = "moS-CK-QzD"; */
+"moS-CK-QzD.title" = "ScaleHelper";
+
+/* Class = "NSTextFieldCell"; title = "version 1.0"; ObjectID = "brp-e6-bdI"; */
+"brp-e6-bdI.title" = "version 1.0";
+
+/* Class = "NSTextFieldCell"; title = "©︎ 2021 Takuto Nakamura"; ObjectID = "Oez-Iz-uO2"; */
+"Oez-Iz-uO2.title" = "©︎ 2021 Takuto Nakamura";

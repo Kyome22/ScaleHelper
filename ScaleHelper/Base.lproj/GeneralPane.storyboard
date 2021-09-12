@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="bU7-R8-ocO">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--General-->
+        <scene sceneID="PEd-7d-5j0">
+            <objects>
+                <viewController title="General" showSeguePresentationStyle="single" id="bU7-R8-ocO" customClass="GeneralPaneVC" customModule="ScaleHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="tOy-S4-hL0">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="140"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="ocQ-6f-tG1">
+                                <rect key="frame" x="20" y="20" width="360" height="100"/>
+                                <subviews>
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="oA6-VM-38M">
+                                        <rect key="frame" x="25" y="68" width="311" height="32"/>
+                                        <textFieldCell key="cell" selectable="YES" alignment="center" id="DXN-mZ-58T">
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                            <string key="title">ScaleHelper extension requires permission.
+Please give permission in the system preferences.</string>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WF9-Rf-K15">
+                                        <rect key="frame" x="84" y="25" width="192" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Open System Preferences" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="umq-0h-NhW">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="openPreferences:" target="bU7-R8-ocO" id="0xF-LT-v6e"/>
+                                        </connections>
+                                    </button>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Hwd-PN-TCl">
+                                        <rect key="frame" x="49" y="0.0" width="263" height="16"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="ScaleHelper extension is not been allowed." id="UAN-tz-S6K">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="WF9-Rf-K15" firstAttribute="top" secondItem="oA6-VM-38M" secondAttribute="bottom" constant="16" id="8D3-ab-PsI"/>
+                                    <constraint firstItem="oA6-VM-38M" firstAttribute="top" secondItem="ocQ-6f-tG1" secondAttribute="top" id="FOm-I8-v1p"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hwd-PN-TCl" secondAttribute="bottom" id="GYH-26-teG"/>
+                                    <constraint firstItem="WF9-Rf-K15" firstAttribute="centerX" secondItem="ocQ-6f-tG1" secondAttribute="centerX" id="Ml3-0N-DF1"/>
+                                    <constraint firstItem="Hwd-PN-TCl" firstAttribute="centerX" secondItem="ocQ-6f-tG1" secondAttribute="centerX" id="No0-XY-8qB"/>
+                                    <constraint firstAttribute="width" constant="360" id="Udf-AH-1JM"/>
+                                    <constraint firstItem="Hwd-PN-TCl" firstAttribute="top" secondItem="WF9-Rf-K15" secondAttribute="bottom" constant="16" id="oVF-8E-Ys5"/>
+                                    <constraint firstItem="oA6-VM-38M" firstAttribute="centerX" secondItem="ocQ-6f-tG1" secondAttribute="centerX" id="tVs-d6-2kn"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ocQ-6f-tG1" firstAttribute="top" secondItem="tOy-S4-hL0" secondAttribute="top" constant="20" id="lsr-PD-Ahu"/>
+                            <constraint firstItem="ocQ-6f-tG1" firstAttribute="leading" secondItem="tOy-S4-hL0" secondAttribute="leading" constant="20" id="u4A-ZF-03Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="statusLabel" destination="Hwd-PN-TCl" id="ALf-oP-Ogp"/>
+                    </connections>
+                </viewController>
+                <customObject id="9uD-mB-xHs" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9" y="95"/>
+        </scene>
+    </scenes>
+</document>

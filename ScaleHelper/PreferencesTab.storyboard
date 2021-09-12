@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="W9f-OF-GNo">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="tQ6-Na-N1m">
+            <objects>
+                <windowController showSeguePresentationStyle="single" id="W9f-OF-GNo" sceneMemberID="viewController">
+                    <window key="window" title="ScaleHelper  〉General" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="4dg-ND-VtY">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+                        <rect key="contentRect" x="425" y="313" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1055"/>
+                        <view key="contentView" id="fv6-qZ-X2x">
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="W9f-OF-GNo" id="Z9d-WX-UnN"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="sZh-tr-KUq" kind="relationship" relationship="window.shadowedContentViewController" id="3PE-ev-w1L"/>
+                    </connections>
+                </windowController>
+                <customObject id="oiG-4Q-QUc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="28"/>
+        </scene>
+        <!--Preferences TabVC-->
+        <scene sceneID="dX9-Mo-46T">
+            <objects>
+                <tabViewController showSeguePresentationStyle="single" selectedTabViewItemIndex="0" tabStyle="toolbar" id="sZh-tr-KUq" customClass="PreferencesTabVC" customModule="ScaleHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem label="General" identifier="General" image="General" id="5wI-Pl-UFT"/>
+                        <tabViewItem label="About" identifier="About" image="About" id="C8n-ML-LS0"/>
+                    </tabViewItems>
+                    <viewControllerTransitionOptions key="transitionOptions"/>
+                    <tabView key="tabView" type="noTabsNoBorder" id="OBc-7O-jNB">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <connections>
+                            <outlet property="delegate" destination="sZh-tr-KUq" id="zfU-wC-aO6"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="OBc-7O-jNB" id="OoH-Ga-DYw"/>
+                        <segue destination="ztB-GN-Spc" kind="relationship" relationship="tabItems" id="bcQ-8a-4Y2"/>
+                        <segue destination="Qaf-cr-ij6" kind="relationship" relationship="tabItems" id="7SZ-wK-3um"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="M2i-NE-5Wc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="875" y="-7"/>
+        </scene>
+        <!--GeneralPane-->
+        <scene sceneID="iMm-ix-oxC">
+            <objects>
+                <controllerPlaceholder storyboardName="GeneralPane" id="ztB-GN-Spc" sceneMemberID="viewController"/>
+                <customObject id="Lc3-j8-hgb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1271" y="-87"/>
+        </scene>
+        <!--AboutPane-->
+        <scene sceneID="HgH-dg-Aa5">
+            <objects>
+                <controllerPlaceholder storyboardName="AboutPane" id="Qaf-cr-ij6" sceneMemberID="viewController"/>
+                <customObject id="XGW-5K-2ZJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1266" y="72"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="About" width="32" height="32"/>
+        <image name="General" width="32" height="32"/>
+    </resources>
+</document>

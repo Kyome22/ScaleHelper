@@ -16,6 +16,12 @@
 		1C67487426CB759600425CA7 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C67487326CB759600425CA7 /* FinderSync.swift */; };
 		1C67487926CB759600425CA7 /* ScaleExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1C67487126CB759600425CA7 /* ScaleExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1C67487F26CB917E00425CA7 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C67487E26CB917E00425CA7 /* Media.xcassets */; };
+		1CCC718526ECB94C00D80433 /* PreferencesTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CCC718426ECB94C00D80433 /* PreferencesTab.storyboard */; };
+		1CCC718B26ECB97C00D80433 /* PreferencesTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC718A26ECB97C00D80433 /* PreferencesTabVC.swift */; };
+		1CCC718D26ECB98C00D80433 /* GeneralPaneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC718C26ECB98C00D80433 /* GeneralPaneVC.swift */; };
+		1CCC718F26ECB99D00D80433 /* AboutPaneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCC718E26ECB99D00D80433 /* AboutPaneVC.swift */; };
+		1CCC719026ECBC6700D80433 /* AboutPane.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CCC719226ECBC6700D80433 /* AboutPane.storyboard */; };
+		1CCC719526ECBE3500D80433 /* GeneralPane.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CCC719726ECBE3500D80433 /* GeneralPane.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +65,14 @@
 		1C67487526CB759600425CA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C67487626CB759600425CA7 /* ScaleExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScaleExtension.entitlements; sourceTree = "<group>"; };
 		1C67487E26CB917E00425CA7 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		1CCC718426ECB94C00D80433 /* PreferencesTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PreferencesTab.storyboard; sourceTree = "<group>"; };
+		1CCC718A26ECB97C00D80433 /* PreferencesTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTabVC.swift; sourceTree = "<group>"; };
+		1CCC718C26ECB98C00D80433 /* GeneralPaneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPaneVC.swift; sourceTree = "<group>"; };
+		1CCC718E26ECB99D00D80433 /* AboutPaneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPaneVC.swift; sourceTree = "<group>"; };
+		1CCC719126ECBC6700D80433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AboutPane.storyboard; sourceTree = "<group>"; };
+		1CCC719426ECBC6900D80433 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/AboutPane.strings; sourceTree = "<group>"; };
+		1CCC719626ECBE3500D80433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/GeneralPane.storyboard; sourceTree = "<group>"; };
+		1CCC719A26ECBE3B00D80433 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/GeneralPane.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +116,16 @@
 			children = (
 				1C39E9EE26DF409100CA17A7 /* main.swift */,
 				1C67485D26CB71C800425CA7 /* AppDelegate.swift */,
+				1CCC718426ECB94C00D80433 /* PreferencesTab.storyboard */,
+				1CCC718A26ECB97C00D80433 /* PreferencesTabVC.swift */,
+				1CCC719726ECBE3500D80433 /* GeneralPane.storyboard */,
+				1CCC718C26ECB98C00D80433 /* GeneralPaneVC.swift */,
+				1CCC719226ECBC6700D80433 /* AboutPane.storyboard */,
+				1CCC718E26ECB99D00D80433 /* AboutPaneVC.swift */,
+				1C39E9F626DFE52F00CA17A7 /* Localizable.strings */,
 				1C67486126CB71C900425CA7 /* Assets.xcassets */,
 				1C67486626CB71C900425CA7 /* Info.plist */,
 				1C67486726CB71C900425CA7 /* ScaleHelper.entitlements */,
-				1C39E9F626DFE52F00CA17A7 /* Localizable.strings */,
 			);
 			path = ScaleHelper;
 			sourceTree = "<group>";
@@ -205,7 +225,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C67486226CB71C900425CA7 /* Assets.xcassets in Resources */,
+				1CCC719026ECBC6700D80433 /* AboutPane.storyboard in Resources */,
 				1C39E9F426DFE52F00CA17A7 /* Localizable.strings in Resources */,
+				1CCC718526ECB94C00D80433 /* PreferencesTab.storyboard in Resources */,
+				1CCC719526ECBE3500D80433 /* GeneralPane.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,7 +249,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C39E9EF26DF409100CA17A7 /* main.swift in Sources */,
+				1CCC718D26ECB98C00D80433 /* GeneralPaneVC.swift in Sources */,
+				1CCC718F26ECB99D00D80433 /* AboutPaneVC.swift in Sources */,
 				1C67485E26CB71C800425CA7 /* AppDelegate.swift in Sources */,
+				1CCC718B26ECB97C00D80433 /* PreferencesTabVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +292,24 @@
 				1C39E9FD26DFE6A600CA17A7 /* ja */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		1CCC719226ECBC6700D80433 /* AboutPane.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CCC719126ECBC6700D80433 /* Base */,
+				1CCC719426ECBC6900D80433 /* ja */,
+			);
+			name = AboutPane.storyboard;
+			sourceTree = "<group>";
+		};
+		1CCC719726ECBE3500D80433 /* GeneralPane.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CCC719626ECBE3500D80433 /* Base */,
+				1CCC719A26ECBE3B00D80433 /* ja */,
+			);
+			name = GeneralPane.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

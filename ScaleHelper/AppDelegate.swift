@@ -6,35 +6,40 @@
 //
 
 import Cocoa
-import FinderSync
 
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    var mainWC: NSWindowController?
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        DispatchQueue.main.async {
-            if FIFinderSyncController.isExtensionEnabled {
-                let alert = NSAlert()
-                alert.alertStyle = .informational
-                alert.informativeText = "allowedInformative".localized
-                alert.addButton(withTitle: "OK")
-                if alert.runModal() == .alertFirstButtonReturn {
-                    NSApplication.shared.terminate(nil)
-                }
-            } else {
-                let alert = NSAlert()
-                alert.alertStyle = .warning
-                alert.informativeText = "requiresPermission".localized
-                alert.messageText = "grantPermission".localized
-                alert.addButton(withTitle: "openPreferences".localized)
-                alert.addButton(withTitle: "cancel".localized)
-                if alert.runModal() == .alertFirstButtonReturn {
-                    FIFinderSyncController.showExtensionManagementInterface()
-                    NSApplication.shared.terminate(nil)
-                }
-            }
+        openPreferences()
+    }
+    
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
+    }
+    
+    func openPreferences() {
+        if mainWC == nil {
+            let sb = NSStoryboard(name: "PreferencesTab", bundle: nil)
+            mainWC = (sb.instantiateInitialController() as! NSWindowController)
+            mainWC!.window?.delegate = self
         }
+        NSApp.activate(ignoringOtherApps: true)
+        mainWC?.showWindow(nil)
     }
 
+}
+
+extension AppDelegate: NSWindowDelegate {
+    
+    func windowWillClose(_ notification: Notification) {
+        guard let window = notification.object as? NSWindow else { return }
+        if window === mainWC?.window {
+            mainWC = nil
+        }
+    }
+    
 }
 
 extension String {
